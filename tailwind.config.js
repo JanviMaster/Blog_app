@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-
-
 export default {
   content: [
-    "./index.html", // Include the HTML file
-    "./src/**/*.{js,ts,jsx,tsx}", // Include all JS/TS/React files in src
-    // ...flowbite.content(), // Add Flowbite's content paths
+    // Add paths to your template files here
+    './src/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {}, // Extend Tailwind's theme if needed
+    extend: {}, // You can customize your theme here
   },
   plugins: [
-    // flowbite.plugin(), // Add Flowbite plugin
+    require('flowbite/plugin'), // Ensure proper syntax for requiring plugins
   ],
 };
+
