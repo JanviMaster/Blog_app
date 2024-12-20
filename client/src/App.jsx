@@ -7,10 +7,7 @@ import SignUp from './pages/SignUp'
 import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
 import Header from './components/Header'
-<<<<<<< HEAD:client/src/App.jsx
 import Explore from './pages/Explore'
-=======
->>>>>>> e6623ba3890a6006570a03494d831171e42e794e:src/App.jsx
 
 export default function App() {
   return (

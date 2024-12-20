@@ -9,6 +9,7 @@ export default function Header() {
   return (
     <Navbar className="border-b bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md px-4 py-3 w-full">
       <div className="container mx-auto flex items-center justify-between">
+        
         <div className="flex flex-1 -ml-6">
           <Link
             to="/"
@@ -73,10 +74,11 @@ export default function Header() {
               Sign In
             </button>
           </Link>
-
-          <Button className="px-3 py-1 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+          <Link to="/register">
+            <button className="px-3 py-1 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
             Register
-          </Button>
+            </button>
+          </Link>
         </div>
       </div>
     </Navbar>

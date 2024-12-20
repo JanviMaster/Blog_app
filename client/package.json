@@ -1,17 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "blog-app",
-  "version": "1.0.0",
-  "type":"module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
-=======
   "name": "client",
   "private": true,
   "version": "0.0.0",
@@ -33,7 +20,7 @@
     "@eslint/js": "^9.13.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.2",
@@ -49,5 +36,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
->>>>>>> e6623ba3890a6006570a03494d831171e42e794e
 }
