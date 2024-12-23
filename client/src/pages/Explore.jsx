@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Explore extends Component {
-  render() {
-    return (
-      <div>
-        Explore
-      </div>
-    )
-  }
+export default function Explore() {
+  return (
+    <div>
+      Explore
+    </div>
+  )
 }

@@ -70,12 +70,12 @@ export default function Header() {
           <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={20} />
 
           <Link to="/sign-in">
-            <button className="px-3 py-1 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
               Sign In
             </button>
           </Link>
           <Link to="/register">
-            <button className="px-3 py-1 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
             Register
             </button>
           </Link>
