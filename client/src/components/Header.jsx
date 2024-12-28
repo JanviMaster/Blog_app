@@ -15,7 +15,7 @@ export default function Header() {
             to="/"
             className="whitespace-nowrap text-xl font-bold text-gray-800 dark:text-white"
           >
-            <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+            <span className="px-2 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
               Lifestyle
             </span>{' '}
             Blog
@@ -70,12 +70,12 @@ export default function Header() {
           <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={20} />
 
           <Link to="/sign-in">
-            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
               Sign In
             </button>
           </Link>
           <Link to="/register">
-            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
             Register
             </button>
           </Link>

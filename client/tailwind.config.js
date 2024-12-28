@@ -12,4 +12,3 @@ export default {
     require('flowbite/plugin'), // Ensure proper syntax for requiring plugins
   ],
 };
-
