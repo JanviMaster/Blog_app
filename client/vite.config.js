@@ -1,11 +1,15 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc"; // Ensure the React plugin is imported
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()], // Add the React plugin here
   server: {
-    watch: {
-      ignored: ["**/DumpStack.log.tmp"], // Exclude the problematic file
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        secure: false,
+      },
     },
   },
+  plugins: [react()],
 });

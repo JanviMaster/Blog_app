@@ -1,17 +1,47 @@
 import { Label, TextInput, Button } from 'flowbite-react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Signin() {
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+    if (!formData.username || !formData.email || !formData.password) {
+      return setErrorMessage('Please fill out all fields.');
+    }
+    try {
+      // setLoading(true);
+      setErrorMessage(null);
+      const res = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.success === false) {
+        return setErrorMessage(data.message);
+      }
+      // setLoading(false);
+      if(res.ok) {
+        navigate('/sign-in');
+      }
+    } catch (error) {
+      setErrorMessage(error.message);
+      // setLoading(false);
+    }
   };
 
   return (
@@ -20,7 +50,7 @@ export default function Signin() {
         {/* Left */}
         <div className="flex-1">
           <Link to="/" className="font-bold dark:text-white text-4xl">
-            <span className="px-2 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+            <span className="px-2 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-pink-500 rounded-lg text-white">
               Lifestyle
             </span>{' '}
             Blog
@@ -31,8 +61,9 @@ export default function Signin() {
         {/* Right */}
         <div className="flex-1 flex-col gap-4 max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
+            {error && <p className="text-red-500 mb-4">{error}</p>}
             <div className="mb-4">
-              <Label value="Your Username" />
+              <Label htmlFor="username" value="Your Username" />
               <TextInput
                 name="username"
                 type="text"
@@ -43,7 +74,7 @@ export default function Signin() {
               />
             </div>
             <div className="mb-4">
-              <Label value="Your Email" />
+              <Label htmlFor="email" value="Your Email" />
               <TextInput
                 name="email"
                 type="email"
@@ -54,7 +85,7 @@ export default function Signin() {
               />
             </div>
             <div className="mb-4">
-              <Label value="Your Password" />
+              <Label htmlFor="password" value="Your Password" />
               <TextInput
                 name="password"
                 type="password"
@@ -65,21 +96,22 @@ export default function Signin() {
               />
             </div>
             <div className="mt-4 text-center">
-              <Button 
-                type="submit" 
-                className="w-full bg-gradient-to-r from-purple-400 to-pink-500  text-white"
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                disabled={loading}
               >
-                Sign In
+                {loading ? 'Signing In...' : 'Sign In'}
               </Button>
-              <Button 
-              type="button" 
+              <Button
+                type="button"
               className="w-full mt-4 bg border-2 border-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-purple-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:via-purple-500 hover:to-purple-500 transition"
               >
-              Sign in with Google
+                Sign in with Google
               </Button>
 
               <div className="flex gap-2 text-sm mt-5">
-                <span>Don't have an account?</span>
+                <span>Have an account?</span>
                 <Link to="/register" className="text-blue-500">
                   Sign Up
                 </Link>
