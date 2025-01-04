@@ -1,4 +1,4 @@
-import { Label, TextInput, Button } from 'flowbite-react';
+import { Label, TextInput, Button, Alert, Spinner } from 'flowbite-react';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -14,16 +14,16 @@ export default function Signin() {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value.trim() });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.username || !formData.email || !formData.password) {
-      return setErrorMessage('Please fill out all fields.');
+      return setErrorMessage("Please fill out all fields.");
     }
     try {
-      // setLoading(true);
+      setLoading(true);
       setErrorMessage(null);
       const res = await fetch('/api/auth/signup', {
         method: 'POST',
@@ -34,13 +34,13 @@ export default function Signin() {
       if (data.success === false) {
         return setErrorMessage(data.message);
       }
-      // setLoading(false);
+      setLoading(false);
       if(res.ok) {
-        navigate('/sign-in');
+        navigate('/register');
       }
     } catch (error) {
       setErrorMessage(error.message);
-      // setLoading(false);
+      setLoading(false);
     }
   };
 
@@ -70,7 +70,7 @@ export default function Signin() {
                 placeholder="Username"
                 id="username"
                 onChange={handleChange}
-                required
+                
               />
             </div>
             <div className="mb-4">
@@ -81,7 +81,7 @@ export default function Signin() {
                 placeholder="name@company.com"
                 id="email"
                 onChange={handleChange}
-                required
+                
               />
             </div>
             <div className="mb-4">
@@ -92,7 +92,7 @@ export default function Signin() {
                 placeholder="Password"
                 id="password"
                 onChange={handleChange}
-                required
+                
               />
             </div>
             <div className="mt-4 text-center">
@@ -101,7 +101,10 @@ export default function Signin() {
                 className="w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
-                {loading ? 'Signing In...' : 'Sign In'}
+                {loading ? ( 
+                  <><Spinner className='sm'/>
+                  <span className='pl-3'>loading...</span></>) 
+                  : 'Sign In'}
               </Button>
               <Button
                 type="button"
@@ -116,6 +119,14 @@ export default function Signin() {
                   Sign Up
                 </Link>
               </div>
+              <br></br>
+              {errorMessage && 
+              <Alert className="ml-3 " color="failure">
+               {typeof errorMessage === "string"
+                ? `Sorry, ${errorMessage} !!`
+                : "Please fill the details correctly. An unexpected error occurred. "}
+              </Alert>
+              }
             </div>
           </form>
         </div>
