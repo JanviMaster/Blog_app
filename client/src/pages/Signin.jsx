@@ -19,13 +19,13 @@ export default function Signin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.username || !formData.email || !formData.password) {
+    if (  !formData.email || !formData.password) {
       return setErrorMessage("Please fill out all fields.");
     }
     try {
       setLoading(true);
       setErrorMessage(null);
-      const res = await fetch('/api/auth/signup', {
+      const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -36,7 +36,7 @@ export default function Signin() {
       }
       setLoading(false);
       if(res.ok) {
-        navigate('/register');
+        navigate('/home');
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -63,17 +63,6 @@ export default function Signin() {
           <form onSubmit={handleSubmit}>
             {error && <p className="text-red-500 mb-4">{error}</p>}
             <div className="mb-4">
-              <Label htmlFor="username" value="Your Username" />
-              <TextInput
-                name="username"
-                type="text"
-                placeholder="Username"
-                id="username"
-                onChange={handleChange}
-                
-              />
-            </div>
-            <div className="mb-4">
               <Label htmlFor="email" value="Your Email" />
               <TextInput
                 name="email"
@@ -81,7 +70,6 @@ export default function Signin() {
                 placeholder="name@company.com"
                 id="email"
                 onChange={handleChange}
-                
               />
             </div>
             <div className="mb-4">
@@ -89,7 +77,7 @@ export default function Signin() {
               <TextInput
                 name="password"
                 type="password"
-                placeholder="Password"
+                placeholder="**********"
                 id="password"
                 onChange={handleChange}
                 
@@ -114,7 +102,7 @@ export default function Signin() {
               </Button>
 
               <div className="flex gap-2 text-sm mt-5">
-                <span>Have an account?</span>
+                <span>Don't have an account?</span>
                 <Link to="/register" className="text-blue-500">
                   Sign Up
                 </Link>
