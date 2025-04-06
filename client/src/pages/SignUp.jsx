@@ -1,7 +1,7 @@
 import { Label, TextInput, Button, Alert, Spinner } from 'flowbite-react';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import OAuth from '../OAuth';
+import OAuth from '../components/OAuth';
 
 export default function SignUp() {
   const [formData, setFormData] = useState({
@@ -107,13 +107,13 @@ export default function SignUp() {
                   <span className='pl-3'>loading...</span></>) 
                   : 'Sign In'}
               </Button>
-              <Button
+              {/* <Button
                 type="button"
               className="w-full mt-4 bg border-2 border-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-purple-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:via-purple-500 hover:to-purple-500 transition"
               >
                 Sign in with Google
-              </Button>
-
+              </Button> */}
+              <OAuth/>
               <div className="flex gap-2 text-sm mt-5">
                 <span>Have an account?</span>
                 <Link to="/sign-in" className="text-blue-500">
@@ -129,7 +129,6 @@ export default function SignUp() {
               </Alert>
               }
             </div>
-            <OAuth/>
           </form>
         </div>
       </div>

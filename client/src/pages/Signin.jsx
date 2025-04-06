@@ -1,13 +1,16 @@
 import { Label, TextInput, Button, Alert, Spinner } from 'flowbite-react';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import OAuth from '../OAuth';
+import OAuth from '../components/OAuth';
+import { signInSuccess,signInFailure,signInStart } from '../redux/user/userSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Signin() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
+  const dispatch= useDispatch();
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -15,7 +18,6 @@ export default function Signin() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value.trim() });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.email || !formData.password) {
@@ -108,7 +110,7 @@ export default function Signin() {
                   'Sign In'
                 )}
               </Button>
-              <OAuth />
+              <OAuth/>
               <div className="flex gap-2 text-sm mt-5">
                 <span>Don't have an account?</span>
                 <Link to="/register" className="text-blue-500">
