@@ -1,7 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'; 
-import { Button, Navbar, TextInput } from 'flowbite-react';
+import { Button, Navbar, TextInput , Dropdown} from 'flowbite-react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FaMoon } from 'react-icons/fa';
+// import { current } from '@reduxjs/toolkit';
+import { Avatar } from 'flowbite-react';
+// import { updateCurrentUser } from 'firebase/auth';
 
 export default function Header() {
   const path = useLocation().pathname;
@@ -15,21 +18,22 @@ export default function Header() {
             to="/"
             className="whitespace-nowrap text-xl font-bold text-gray-800 dark:text-white"
           >
-            <span className="px-2 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+            <span className="px-3 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
               Lifestyle
-            </span>{' '}
+            </span>
+            {' '}
             Blog
           </Link>
         </div>
 
-        <form className="hidden lg:block flex-1 mx-4">
+        {/* <form className="hidden lg:block flex-1 mx-4">
           <TextInput
             type="text"
             placeholder="Search..."
             rightIcon={AiOutlineSearch}
             className="w-full rounded-lg border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
           />
-        </form>
+        </form> */}
 
         <div className="hidden lg:flex flex-grow justify-center gap-6">
           <Link
@@ -67,17 +71,28 @@ export default function Header() {
         </div>
 
         <div className="flex items-center justify-end gap-6">
-          <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={20} />
+          <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={25} />
 
           <Link to="/sign-in">
-            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <Button className="px-3 h-10 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
               Sign In
-            </button>
+            </Button>
           </Link>
+          {/* <Dropdown
+          arrowIcon={false}
+          inline
+          label={
+            <Avatar>
+              alt='user'
+              img={}
+              rounded
+            </Avatar>
+          }/> */}
+            {/* </Dropdown> */}
           <Link to="/register">
-            <button className="px-3 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <Button className="px-3 h-10 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
             Register
-            </button>
+            </Button>
           </Link>
         </div>
       </div>

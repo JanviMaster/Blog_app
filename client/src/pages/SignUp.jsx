@@ -99,6 +99,21 @@ export default function SignUp() {
             <div className="mt-4 text-center">
               <Button
                 type="submit"
+                className="w-full py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                disabled={loading}
+              >
+               {loading ? (
+                <>
+                <Spinner className="sm" />
+                <span className="pl-3">loading...</span>
+                </>
+                ) : (
+                'Sign In'
+               )}
+              </Button>
+
+              {/* <Button
+                type="submit"
                 className="w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
@@ -106,7 +121,7 @@ export default function SignUp() {
                   <><Spinner className='sm'/>
                   <span className='pl-3'>loading...</span></>) 
                   : 'Sign In'}
-              </Button>
+              </Button> */}
               {/* <Button
                 type="button"
               className="w-full mt-4 bg border-2 border-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-purple-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:via-purple-500 hover:to-purple-500 transition"
@@ -114,7 +129,7 @@ export default function SignUp() {
                 Sign in with Google
               </Button> */}
               <OAuth/>
-              <div className="flex gap-2 text-sm mt-5">
+              <div className="flex gap-5 text-sm mt-5">
                 <span>Have an account?</span>
                 <Link to="/sign-in" className="text-blue-500">
                   Sign In
