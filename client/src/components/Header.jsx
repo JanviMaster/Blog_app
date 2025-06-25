@@ -25,16 +25,6 @@ export default function Header() {
             Blog
           </Link>
         </div>
-
-        {/* <form className="hidden lg:block flex-1 mx-4">
-          <TextInput
-            type="text"
-            placeholder="Search..."
-            rightIcon={AiOutlineSearch}
-            className="w-full rounded-lg border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-          />
-        </form> */}
-
         <div className="hidden lg:flex flex-grow justify-center gap-6">
           <Link
             to="/"
@@ -74,7 +64,7 @@ export default function Header() {
           <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={25} />
 
           <Link to="/sign-in">
-            <Button className="px-3 h-10 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <Button className="px-1 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
               Sign In
             </Button>
           </Link>
@@ -90,7 +80,7 @@ export default function Header() {
           }/> */}
             {/* </Dropdown> */}
           <Link to="/register">
-            <Button className="px-3 h-10 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <Button className="px-1  text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
             Register
             </Button>
           </Link>

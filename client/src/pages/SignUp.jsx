@@ -99,7 +99,7 @@ export default function SignUp() {
             <div className="mt-4 text-center">
               <Button
                 type="submit"
-                className="w-full py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                className="w-full px-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
                {loading ? (
@@ -129,7 +129,7 @@ export default function SignUp() {
                 Sign in with Google
               </Button> */}
               <OAuth/>
-              <div className="flex gap-5 text-sm mt-5">
+              <div className="flex gap-2 text-sm mt-5">
                 <span>Have an account?</span>
                 <Link to="/sign-in" className="text-blue-500">
                   Sign In
