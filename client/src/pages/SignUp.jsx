@@ -48,7 +48,6 @@ export default function SignUp() {
   return (
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
-        {/* Left */}
         <div className="flex-1">
           <Link to="/" className="font-bold dark:text-white text-4xl">
             <span className="px-2 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-pink-500 rounded-lg text-white">
@@ -59,7 +58,6 @@ export default function SignUp() {
           <p className="text-b my-4">Publish your passions your way</p>
         </div>
 
-        {/* Right */}
         <div className="flex-1 flex-col gap-4 max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
             {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -99,7 +97,7 @@ export default function SignUp() {
             <div className="mt-4 text-center">
               <Button
                 type="submit"
-                className="w-full px-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                className="w-full px-1 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
                {loading ? (
@@ -111,23 +109,6 @@ export default function SignUp() {
                 'Sign In'
                )}
               </Button>
-
-              {/* <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
-                disabled={loading}
-              >
-                {loading ? ( 
-                  <><Spinner className='sm'/>
-                  <span className='pl-3'>loading...</span></>) 
-                  : 'Sign In'}
-              </Button> */}
-              {/* <Button
-                type="button"
-              className="w-full mt-4 bg border-2 border-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-purple-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:via-purple-500 hover:to-purple-500 transition"
-              >
-                Sign in with Google
-              </Button> */}
               <OAuth/>
               <div className="flex gap-2 text-sm mt-5">
                 <span>Have an account?</span>

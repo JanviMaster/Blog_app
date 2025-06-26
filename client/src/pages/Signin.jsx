@@ -2,7 +2,7 @@ import { Label, TextInput, Button, Alert, Spinner } from 'flowbite-react';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import OAuth from '../components/OAuth';
-import { signInSuccess,signInFailure,signInStart } from '../redux/user/userSlice';
+// import { signInSuccess,signInFailure,signInStart } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 
 export default function Signin() {
@@ -50,7 +50,6 @@ export default function Signin() {
   return (
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
-        {/* Left Section */}
         <div className="flex-1">
           <Link to="/" className="font-bold dark:text-white text-4xl">
             <span className="px-2 py-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-pink-500 rounded-lg text-white">
@@ -61,8 +60,7 @@ export default function Signin() {
           <p className="text-base my-4">Publish your passions your way.</p>
         </div>
 
-        {/* Right Section */}
-        <div className="flex-1 flex-col gap-4 max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
+\        <div className="flex-1 flex-col gap-4 max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
             {errorMessage && (
               <Alert color="failure" aria-live="polite">
@@ -94,11 +92,10 @@ export default function Signin() {
               />
             </div>
             <div className="mt-4 text-center">
-              {/* <OAuth /> */}
 
               <Button
                 type="submit"
-                className="px-1 w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                className="px-1 py-1 w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
                 {loading ? (

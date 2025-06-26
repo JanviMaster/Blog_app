@@ -4,13 +4,13 @@ export default function About() {
   return (
     <div>
 <div className="max-w-6xl mx-auto px-4 py-10 text-gray-800">
-      <h1 className="text-6xl font-bold mb-6  text-pink-600">
+      <h1 className="font-semibold text-6xl">
         About Us
       </h1><br/><br/>
       
       <p className=" mb-6 text-center">
         <p className="text-3xl mb-6 text-center">
-        <span className="font-semibold">Welcome to Lifestyle Blog!</span><br />
+        <span className="font-semibold text-pink-600">Welcome to Lifestyle Blog!</span><br />
         </p>
         Your go-to space for everything inspiring, refreshing, and real.
      </p>

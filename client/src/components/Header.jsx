@@ -10,8 +10,8 @@ export default function Header() {
   const path = useLocation().pathname;
 
   return (
-    <Navbar className="border-b bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md px-4 py-3 w-full">
-      <div className="container mx-auto flex items-center justify-between">
+    <Navbar className=" border-b bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md px-4 py-5 w-full">
+      <div className="max-h-50vh container mx-auto flex items-center justify-between">
         
         <div className="flex flex-1 -ml-6">
           <Link
@@ -64,8 +64,8 @@ export default function Header() {
           <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={25} />
 
           <Link to="/sign-in">
-            <Button className="px-1 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
-              Sign In
+            <Button className="px-1 py-1 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+              Join us
             </Button>
           </Link>
           {/* <Dropdown
@@ -79,11 +79,11 @@ export default function Header() {
             </Avatar>
           }/> */}
             {/* </Dropdown> */}
-          <Link to="/register">
-            <Button className="px-1  text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+          {/* <Link to="/register">
+            <Button className="px-1 py-1 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
             Register
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Navbar>

@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Signin from './pages/Signin'
 import SignUp from './pages/SignUp'
-import Dashboard from './pages/Dashboard'
 import Projects from './pages/Projects'
 import Header from './components/Header'
 import Explore from './pages/Explore'
@@ -12,7 +11,6 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-
     <BrowserRouter>
     <Header/>
      <Routes>
@@ -21,11 +19,9 @@ export default function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/sign-in" element={<Signin/>}/>
       <Route path="/register" element={<SignUp/>}/>
-      <Route path="/dashboard" element={<Dashboard/>}/>
       <Route path="/projects" element={<Projects/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
-    
   )
 }
