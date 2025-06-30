@@ -60,7 +60,7 @@ export default function Signin() {
           <p className="text-base my-4">Publish your passions your way.</p>
         </div>
 
-\        <div className="flex-1 flex-col gap-4 max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
+         <div className="flex-1 flex-col gap-4 max-w-md mx-auto bg-white shadow-lg p-6 rounded-lg">
           <form onSubmit={handleSubmit}>
             {errorMessage && (
               <Alert color="failure" aria-live="polite">

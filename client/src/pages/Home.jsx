@@ -54,15 +54,15 @@ export default function Home() {
         <div className='flex flex justify-center items-center items-center'>
           <p>Dive into a world of creativity and inspiration</p>
         </div >
-  <div className="grid md:grid-cols-3 gap-8 px-4 p-20">
+  <div className="grid md:grid-cols-3 gap-6 px-4 p-20">
     
     {/* Card 1 */}
-    <div className="flex flex-col md:flex-row items-center border p-4 rounded-xl shadow hover:shadow-lg transition">
+    <div className="flex flex-col md:flex-row items-center border p-3 rounded-xl shadow hover:shadow-lg transition">
       <div className="md:w-1/2 text-left">
         <p className="text-sm text-gray-500 mb-2">Art</p>
         <h4 className="text-xl font-semibold mb-2">Unleash Your Inner Artist</h4>
         <p className="text-sm text-gray-600 mb-4">Explore artistic expression and creative techniques.</p>
-        <a href="#" className="text-purple-600 font-medium hover:underline">Learn →</a>
+        <a href="/explore" className="text-purple-600 font-medium hover:underline">Learn →</a>
       </div>
       <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4">
         <div className="w-full h-36 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -72,12 +72,12 @@ export default function Home() {
     </div>
 
     {/* Card 2 */}
-    <div className="flex flex-col md:flex-row items-center border p-4 rounded-xl shadow hover:shadow-lg transition">
+    <div className="flex flex-col md:flex-row items-center border p-3 rounded-xl shadow hover:shadow-lg transition">
       <div className="md:w-1/2 text-left">
         <p className="text-sm text-gray-500 mb-2">Travel</p>
         <h4 className="text-xl font-semibold mb-2">Wander the World</h4>
         <p className="text-sm text-gray-600 mb-4">Join us on adventures that inspire and excite.</p>
-        <a href="#" className="text-purple-600 font-medium hover:underline">Explore →</a>
+        <a href="/explore" className="text-purple-600 font-medium hover:underline">Explore →</a>
       </div>
       <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4">
         <div className="w-full h-36 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -87,12 +87,12 @@ export default function Home() {
     </div>
 
     {/* Card 3 */}
-    <div className="flex flex-col md:flex-row items-center border p-4 rounded-xl shadow hover:shadow-lg transition">
+    <div className="flex flex-col md:flex-row items-center border p-3 rounded-xl shadow hover:shadow-lg transition">
       <div className="md:w-1/2 text-left">
         <p className="text-sm text-gray-500 mb-2">Food</p>
         <h4 className="text-xl font-semibold mb-2">Savor Every Bite</h4>
         <p className="text-sm text-gray-600 mb-4">Discover recipes that delight your taste buds.</p>
-        <a href="#" className="text-purple-600 font-medium hover:underline">Cook →</a>
+        <a href="/explore" className="text-purple-600 font-medium hover:underline">Cook →</a>
       </div>
       <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4">
         <div className="w-full h-36 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -101,6 +101,31 @@ export default function Home() {
       </div>
     </div>
   </div>
+  <div className='p-4'>
+  <h1 className="font-semibold text-7xl ">
+      Start your free website 
+  </h1>
+  <h1 className="font-semibold text-7xl ">
+      trial today!
+  </h1>
+  </div>
+  <div className="px-8 py-4">
+      <div className="flex items-center gap-4">
+              <Link to="/sign-in">
+        <Button
+        className="px-4 py-2 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-white rounded-lg shadow-md transition-all duration-200 hover:from-pink-600 hover:to-indigo-600"
+        >
+          Get started
+        </Button>
+        </Link>
+        <p className="text-sm text-gray-600">No credit card required. Cancel anytime.</p>
+      </div>
+    </div>
+
+  {/* // className="px-2 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"> */}
+  {/* bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600 */}
+  {/* bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 rounded-lg shadow-md transition-all duration-200 hover:from-pink-600 hover:to-indigo-600 */}
+
 </div>
     </>
   );
