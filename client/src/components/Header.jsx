@@ -64,7 +64,7 @@ export default function Header() {
           <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={25} />
 
           <Link to="/sign-in">
-            <Button className="px-1 py-1 text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
+            <Button className="px-1 h-10  text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
               Join us
             </Button>
           </Link>

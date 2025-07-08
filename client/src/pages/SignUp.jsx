@@ -37,7 +37,7 @@ export default function SignUp() {
       }
       setLoading(false);
       if(res.ok) {
-        navigate('/register');
+        navigate('/sign-up');
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -97,7 +97,7 @@ export default function SignUp() {
             <div className="mt-4 text-center">
               <Button
                 type="submit"
-                className="w-full px-1 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                className="w-full px-1 h-10 bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
                {loading ? (

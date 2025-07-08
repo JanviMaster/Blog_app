@@ -23,13 +23,13 @@ export default function Home() {
             <div className="flex justify-start space-x-4">
               <Link to="/explore">
               <Button 
-              className="px-2 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white">
+              className="px-2  bg-gradient-to-r from-purple-400 to-pink-500 text-white">
                Explore
               </Button>
               </Link>
               <Link to="/sign-in">
               <Button 
-              className=" px-2  py-1 text-sm font-medium text-white border-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-purple-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:via-purple-500 hover:to-purple-500 transition">
+              className=" px-2  text-sm font-medium text-white border-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-purple-500 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:via-purple-500 hover:to-purple-500 transition">
                 Sign In
               </Button>
               </Link>
@@ -56,7 +56,6 @@ export default function Home() {
         </div >
   <div className="grid md:grid-cols-3 gap-6 px-4 p-20">
     
-    {/* Card 1 */}
     <div className="flex flex-col md:flex-row items-center border p-3 rounded-xl shadow hover:shadow-lg transition">
       <div className="md:w-1/2 text-left">
         <p className="text-sm text-gray-500 mb-2">Art</p>
@@ -71,7 +70,6 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Card 2 */}
     <div className="flex flex-col md:flex-row items-center border p-3 rounded-xl shadow hover:shadow-lg transition">
       <div className="md:w-1/2 text-left">
         <p className="text-sm text-gray-500 mb-2">Travel</p>
@@ -86,7 +84,6 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Card 3 */}
     <div className="flex flex-col md:flex-row items-center border p-3 rounded-xl shadow hover:shadow-lg transition">
       <div className="md:w-1/2 text-left">
         <p className="text-sm text-gray-500 mb-2">Food</p>
@@ -113,7 +110,7 @@ export default function Home() {
       <div className="flex items-center gap-4">
               <Link to="/sign-in">
         <Button
-        className="px-4 py-2 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-white rounded-lg shadow-md transition-all duration-200 hover:from-pink-600 hover:to-indigo-600"
+        className="px-5 py-1 bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-white rounded-lg shadow-md transition-all duration-200 hover:from-pink-600 hover:to-indigo-600"
         >
           Get started
         </Button>
@@ -122,7 +119,7 @@ export default function Home() {
       </div>
     </div>
 
-  {/* // className="px-2 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"> */}
+  {/* className="px-2 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"> */}
   {/* bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600 */}
   {/* bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 rounded-lg shadow-md transition-all duration-200 hover:from-pink-600 hover:to-indigo-600 */}
 

@@ -95,7 +95,7 @@ export default function Signin() {
 
               <Button
                 type="submit"
-                className="px-1 py-1 w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
+                className="px-1 h-10 w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white"
                 disabled={loading}
               >
                 {loading ? (
