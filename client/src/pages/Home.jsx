@@ -7,8 +7,9 @@ export default function Home() {
   return (
     <>
       <div className="p-10 py-24">
-        <div className="flex justify-between">
-          <div className="w-1/2 px-4 py-9 max-h-100vh">
+        <div className="flex justify-between ">
+          
+          <div className="w-1/2 px-4 py-9 max-h-100">
             <h1 className="font-semibold text-6xl">
               Discover Your Next Favorite Blog Adventure
             </h1>
@@ -35,7 +36,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div><br></br></div>
         </div>
         <div className="mt-10 flex justify-center items-center">
           <img

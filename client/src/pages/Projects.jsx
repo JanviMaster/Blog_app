@@ -11,7 +11,9 @@ export default function Project() {
       <h2 className="text-2xl font-semibold mb-2">No Projects Yet</h2>
       <p className="text-gray-600 mb-6">Start by creating your first project!</p>
 
-      <Link to="/create-blog">
+      <Link 
+      // to="/create-blog"
+      >
       <button className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-pink-700 transition flex items-center gap-2">
         <FiPlus className="text-lg" />
         Create New Project

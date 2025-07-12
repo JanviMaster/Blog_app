@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'; 
 import { Button, Navbar, TextInput , Dropdown} from 'flowbite-react';
-import { AiOutlineSearch } from 'react-icons/ai';
-import { FaMoon } from 'react-icons/fa';
+// import { AiOutlineSearch } from 'react-icons/ai';
+// import { FaMoon } from 'react-icons/fa';
 // import { current } from '@reduxjs/toolkit';
-import { Avatar } from 'flowbite-react';
+// import { Avatar } from 'flowbite-react';
 // import { updateCurrentUser } from 'firebase/auth';
 
 export default function Header() {
@@ -61,7 +61,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center justify-end gap-6">
-          <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={25} />
+          {/* <FaMoon className="text-gray-600 dark:text-gray-300 cursor-pointer hover:text-indigo-500" size={25} /> */}
 
           <Link to="/sign-in">
             <Button className="px-1 h-10  text-sm font-medium text-white bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-lg shadow-md transition-all duration-200 hover:from-purple-600 hover:to-blue-600">
