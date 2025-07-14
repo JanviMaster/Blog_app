@@ -7,11 +7,12 @@ export default function Home() {
   return (
     <>
       <div className="p-10 py-24">
+        <br></br>
         <div className="flex justify-between ">
           
           <div className="w-1/2 px-4 py-9 max-h-100">
             <h1 className="font-semibold text-6xl">
-              Discover Your Next Favorite Blog Adventure
+              Discover Your Next Favorite Blog Adventure 
             </h1>
           </div>
 
@@ -37,10 +38,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <br></br><br></br>
         <div className="mt-10 flex justify-center items-center">
           <img
             src={asset1}
-            className="max-h-[102vh] w-auto object-contain rounded-xl shadow-lg"
+            className="max-h-[100vh] w-auto object-contain rounded-xl shadow-lg"
             alt="Banner"
           />
         </div>
@@ -98,14 +100,16 @@ export default function Home() {
       </div>
     </div>
   </div>
+  <br/>
   <div className='p-4'>
   <h1 className="font-semibold text-7xl ">
-      Start your free website 
+      Start your free 
   </h1>
   <h1 className="font-semibold text-7xl ">
       trial today!
   </h1>
   </div>
+    
   <div className="px-8 py-4">
       <div className="flex items-center gap-4">
               <Link to="/sign-in">
@@ -117,6 +121,7 @@ export default function Home() {
         </Link>
         <p className="text-sm text-gray-600">No credit card required. Cancel anytime.</p>
       </div>
+      <br/>
     </div>
 
   {/* className="px-2 py-1 bg-gradient-to-r from-purple-400 to-pink-500 text-white"> */}
