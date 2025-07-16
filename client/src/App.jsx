@@ -4,7 +4,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Signin from './pages/Signin'
 import SignUp from './pages/SignUp'
-// import Projects from './pages/Projects'
 import Header from './components/Header'
 import Explore from './pages/Explore'
 import Footer from './components/Footer'
@@ -14,9 +13,9 @@ import { BlogProvider } from "./contexts/BlogContext";
 
 export default function App() {
   return (
+    <BlogProvider>
     <BrowserRouter>
     <Header/>
-    <BlogProvider>
      <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/explore" element={<Explore/>}/>
@@ -26,8 +25,8 @@ export default function App() {
       <Route path="/projects" element={<Projects/>}/>
       <Route path="/create-blog" element={<CreateBlog/>}/>
       </Routes>
-      </BlogProvider>
       <Footer/>
     </BrowserRouter>
+    </BlogProvider>
   )
 }

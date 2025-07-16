@@ -1,4 +1,5 @@
-import { createContext, useState } from "react";
+// src/contexts/BlogContext.jsx
+import React, { createContext, useState } from "react";
 
 export const BlogContext = createContext();
 
@@ -6,7 +7,7 @@ export const BlogProvider = ({ children }) => {
   const [blogs, setBlogs] = useState([]);
 
   const addBlog = (blog) => {
-    setBlogs([...blogs, blog]);
+    setBlogs((prev) => [...prev, blog]);
   };
 
   return (
