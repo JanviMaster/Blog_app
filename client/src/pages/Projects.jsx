@@ -1,4 +1,3 @@
-// src/pages/Projects.jsx
 import React, { useContext } from "react";
 import { BlogContext } from "../contexts/BlogContext";
 import { FaFolderOpen } from "react-icons/fa";
@@ -36,9 +35,13 @@ export default function Project() {
               <h3 className="text-xl font-semibold">{blog.title}</h3>
               <p className="text-sm text-gray-600 mb-2">{blog.category}</p>
               <p className="text-gray-700">{blog.content.slice(0, 100)}...</p>
+              
             </div>
+            
           ))}
+          
         </div>
+        
       )}
     </div>
   );

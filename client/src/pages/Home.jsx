@@ -105,9 +105,6 @@ export default function Home() {
   <h1 className="font-semibold text-7xl ">
       Start your free trial today!
   </h1>
-  {/* <h1 className="font-semibold text-7xl ">
-       today!
-  </h1> */}
   </div>
     
   <div className="px-8 py-4">
