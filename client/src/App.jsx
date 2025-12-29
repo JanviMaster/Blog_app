@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { HashRouter } from "react-router-dom";
+import { HashRouter , Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Signin from './pages/Signin';
@@ -14,7 +15,7 @@ import { BlogProvider } from "./contexts/BlogContext";
 export default function App() {
   return (
     <BlogProvider>
-    <BrowserRouter>
+    <HashRouter>
     <Header/>
      <Routes>
       <Route path="/" element={<Home/>}/>
@@ -26,7 +27,7 @@ export default function App() {
       <Route path="/create-blog" element={<CreateBlog/>}/>
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
     </BlogProvider>
   )
 }

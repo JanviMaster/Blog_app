@@ -11,5 +11,6 @@ export default defineConfig({
       },
     },
   },
+  base: "/Blog_app/",
   plugins: [react()],
 });
